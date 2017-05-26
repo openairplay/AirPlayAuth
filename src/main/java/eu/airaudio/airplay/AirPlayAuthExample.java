@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class AirPlayAuthExample {
 
     // Generated via {@code AirPlayAuth.generateNewAuthToken()}
-    private static final String STORED_AUTH_TOKEN = "qnn1i23srq5m8giv1nagsvojnk@302e020100300506032b657004220420eb92ab919f68cc716f7f85a609531c3de74f87c9f1c9007c35516b4f5ef1fa25";
+    private static final String STORED_AUTH_TOKEN = "I1Y67NO1F5VFAVPG@302e020100300506032b657004220420eb92ab919f68cc716f7f85a609531c3de74f87c9f1c9007c35516b4f5ef1fa25";
 
     public static final String IP = "192.168.1.141";
     public static final int PORT = 7000;
@@ -50,6 +50,4 @@ public class AirPlayAuthExample {
         socket.close();
 
     }
-
-
 }

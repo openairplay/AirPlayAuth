@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
 import java.util.Map;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -102,6 +103,16 @@ public class AuthUtils {
         }
         String line = byteArrayOutputStream.toString("UTF-8");
         return line;
+    }
+
+    public static String randomString(final int length) {
+        char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+        Random rnd = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < length; i++)
+            sb.append(chars[rnd.nextInt(chars.length)]);
+
+        return sb.toString();
     }
 
 }

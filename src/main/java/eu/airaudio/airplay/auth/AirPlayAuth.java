@@ -69,7 +69,7 @@ public class AirPlayAuth {
      * @return An authToken to be used with the constructor of AirPlayAuth.
      */
     public static String generateNewAuthToken() {
-        String clientId = new BigInteger(130, new SecureRandom()).toString(32);
+        String clientId = AuthUtils.randomString(16);
 
         return clientId + "@" + net.i2p.crypto.eddsa.Utils.bytesToHex(new KeyPairGenerator().generateKeyPair().getPrivate().getEncoded());
     }
